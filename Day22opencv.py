@@ -11,8 +11,7 @@ image=cv2.imread('lena.jpg',1)
 cv2.namedWindow('image')
 cv2.setMouseCallback('image',draw_circle)
 
-#Here we will be keep drAWING till we press the escape key
-while(1):
+#Here we will be keep drAWING till we press the escape keyle(1):
     cv2.imshow('image',image)
     if cv2.waitKey(20) & 0xFF == 27 :
         break
