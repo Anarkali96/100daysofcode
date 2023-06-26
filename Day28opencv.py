@@ -1,0 +1,16 @@
+#Here we will be blurring the image with lpf and averaging
+
+import cv2
+import numpy as np
+
+image=cv2.imread('train.jpeg',1)
+#matrix=np.ones((5,5),np.float32)/25  #This is for lpf
+
+#new_image=cv2.filter2D(image,-1,matrix) #This is for lpf
+blur=cv2.blur(image,(5,5))
+Gassuan_blur=cv2.GaussianBlur(image,(5,5),0)
+cv2.imshow('blur',blur)
+cv2.imshow('image',image)
+#cv2.imshow('new_im',new_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
